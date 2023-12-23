@@ -33,5 +33,11 @@ namespace kata_password_validator
         {
             Assert.False(PasswordValidator.IsValid("holaMundo_"));
         }
+        
+        [Fact]
+        public void contain_a_under_score()
+        {
+            Assert.False(PasswordValidator.IsValid("holaMundo1"));
+        }
     }
 }
