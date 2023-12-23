@@ -7,27 +7,11 @@ namespace kata_password_validator
     {
         public static bool IsValid(string password)
         {
-            if (password.Length < 8)
-            {
-                return false;
-            }
-            if (!password.Any(char.IsLower))
-            {
-                return false;
-            }
-            if (!password.Any(char.IsUpper))
-            {
-                return false;
-            }
-            if (!password.Any(char.IsDigit))
-            {
-                return false;
-            }
-            if (!password.Contains('_'))
-            {
-                return false;
-            }
-            return true;
+            return password.Length >= 8 &&
+                   password.Any(char.IsLower) &&
+                   password.Any(char.IsUpper) &&
+                   password.Any(char.IsDigit) &&
+                   password.Contains('_');
         }
     }
 }
