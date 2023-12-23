@@ -5,7 +5,7 @@ namespace kata_password_validator
     {
         public static bool IsValid(string password)
         {
-            return false;
+            return true;
         }
     }
 }
