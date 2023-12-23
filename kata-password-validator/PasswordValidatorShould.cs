@@ -15,5 +15,11 @@ namespace kata_password_validator
         {
             Assert.False(PasswordValidator.IsValid("aA_1"));
         }
+
+        [Fact]
+        public void contain_a_lowercase_letter()
+        {
+            Assert.False(PasswordValidator.IsValid("HOLAMUNDO_1"));
+        }
     }
 }
