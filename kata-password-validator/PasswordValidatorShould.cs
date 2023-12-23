@@ -21,5 +21,11 @@ namespace kata_password_validator
         {
             Assert.False(PasswordValidator.IsValid("HOLAMUNDO_1"));
         }
+        
+        [Fact]
+        public void contain_an_uppercase_letter()
+        {
+            Assert.False(PasswordValidator.IsValid("holamundo_1"));
+        }
     }
 }
