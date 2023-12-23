@@ -23,6 +23,10 @@ namespace kata_password_validator
             {
                 return false;
             }
+            if (!password.Contains('_'))
+            {
+                return false;
+            }
             return true;
         }
     }
