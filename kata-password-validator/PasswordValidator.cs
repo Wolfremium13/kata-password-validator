@@ -1,3 +1,5 @@
+using System.Linq;
+
 namespace kata_password_validator
 {
     public class PasswordValidator
@@ -6,6 +8,10 @@ namespace kata_password_validator
         public static bool IsValid(string password)
         {
             if (password.Length < 8)
+            {
+                return false;
+            }
+            if (!password.Any(char.IsLower))
             {
                 return false;
             }
