@@ -19,6 +19,10 @@ namespace kata_password_validator
             {
                 return false;
             }
+            if (!password.Any(char.IsDigit))
+            {
+                return false;
+            }
             return true;
         }
     }
