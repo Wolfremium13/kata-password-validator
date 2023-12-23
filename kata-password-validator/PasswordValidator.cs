@@ -15,6 +15,10 @@ namespace kata_password_validator
             {
                 return false;
             }
+            if (!password.Any(char.IsUpper))
+            {
+                return false;
+            }
             return true;
         }
     }
