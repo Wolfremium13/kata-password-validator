@@ -27,5 +27,11 @@ namespace kata_password_validator
         {
             Assert.False(PasswordValidator.IsValid("holamundo_1"));
         }
+        
+        [Fact]
+        public void contain_a_number()
+        {
+            Assert.False(PasswordValidator.IsValid("holaMundo_"));
+        }
     }
 }
