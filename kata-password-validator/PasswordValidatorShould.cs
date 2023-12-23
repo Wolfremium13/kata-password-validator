@@ -7,7 +7,7 @@ namespace kata_password_validator
         [Fact]
         public void validate_all_rules()
         {
-            Assert.True(PasswordValidator.IsValid("holaMundo_1"));
+            Assert.True(PasswordValidator.IsValid("helloWorld_1"));
         }
         
         [Fact]
@@ -19,25 +19,25 @@ namespace kata_password_validator
         [Fact]
         public void contain_a_lowercase_letter()
         {
-            Assert.False(PasswordValidator.IsValid("HOLAMUNDO_1"));
+            Assert.False(PasswordValidator.IsValid("HELLOWORLD_1"));
         }
         
         [Fact]
         public void contain_an_uppercase_letter()
         {
-            Assert.False(PasswordValidator.IsValid("holamundo_1"));
+            Assert.False(PasswordValidator.IsValid("helloworld_1"));
         }
         
         [Fact]
         public void contain_a_number()
         {
-            Assert.False(PasswordValidator.IsValid("holaMundo_"));
+            Assert.False(PasswordValidator.IsValid("helloWorld"));
         }
         
         [Fact]
         public void contain_a_under_score()
         {
-            Assert.False(PasswordValidator.IsValid("holaMundo1"));
+            Assert.False(PasswordValidator.IsValid("helloWorld1"));
         }
     }
 }
